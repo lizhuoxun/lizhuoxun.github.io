@@ -1,0 +1,218 @@
+/* 重置和基本样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 导航栏 */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* 主容器 */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* 个人信息区域 */
+.profile-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.text-content {
+    flex: 2;
+}
+
+.photo-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #222;
+    margin: 20px 0 10px 0;
+    border-left: 4px solid #0066cc;
+    padding-left: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* 头像 */
+.avatar-frame {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 联系方式 */
+.contact .social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 15px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.fas, .fab {
+    margin-right: 8px;
+}
+
+/* 论文发表 */
+.publications h2 {
+    margin-top: 40px;
+}
+
+.paper {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    align-items: flex-start;
+}
+
+.paper:last-child {
+    border-bottom: none;
+}
+
+.paper-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.paper-info h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.authors {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.journal {
+    color: #666;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.paper-link {
+    font-size: 14px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.paper-link:hover {
+    text-decoration: underline;
+}
+
+/* 页脚 */
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+    }
+    
+    .photo-content {
+        order: -1;
+    }
+    
+    .avatar-frame {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .navbar {
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        margin: 0 10px;
+    }
+}
